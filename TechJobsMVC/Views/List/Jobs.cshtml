@@ -7,15 +7,28 @@
         
             @foreach (var item in ViewBag.jobs)
             {
-                <table class = "job-listing">
+            <table class = "job-listing">
+                
                     <tr>
-                        <td>@item.Name</td>
-                        <td>@item.Employer</td>
-                        <td>@item.Location</td>
-                        <td> @item.PositionType</td>
-                        <td>@item.CoreCompetency</td>
+                        <td>ID: @item.Id</td>
                     </tr>
-                </table>
+                    <tr>
+                        <td>Name: @item.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Employer: @item.Employer</td>
+                    </tr>
+                    <tr>
+                        <td>Location: @item.Location</td>
+                    </tr>
+                    <tr>
+                        <td>Position Type: @item.PositionType</td>
+                    </tr>
+                    <tr>
+                        <td>Core Competency: @item.CoreCompetency</td>
+                    </tr>
+                
+            </table>
 
             }
 

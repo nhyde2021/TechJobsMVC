@@ -1,14 +1,28 @@
 ﻿<h1 class = "centered">Search Results</h1>
 
-<table class = "job-listing">
-    @foreach (var item in ViewBag.jobs)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Employer</td>
-            <td>@item.Location</td>
-            <td> @item.PositionType</td>
-            <td>@item.CoreCompetency</td>
-        </tr>
-    }
-</table>
+            @foreach (var item in ViewBag.jobs)
+            {
+            <table class = "job-listing">
+                
+                    <tr>
+                        <td>ID: @item.Id</td>
+                    </tr>
+                    <tr>
+                        <td>Name: @item.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Employer: @item.Employer</td>
+                    </tr>
+                    <tr>
+                        <td>Location: @item.Location</td>
+                    </tr>
+                    <tr>
+                        <td>Position Type: @item.PositionType</td>
+                    </tr>
+                    <tr>
+                        <td>Core Competency: @item.CoreCompetency</td>
+                    </tr>
+                
+            </table>
+
+            }
