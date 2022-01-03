@@ -20,7 +20,8 @@ namespace TechJobsMVC.Controllers
         }
 
         // TODO #3: Create an action method to process a search request and render the updated search view. 
-        
+        [HttpPost]
+        [Route("/search/results")]
         public IActionResult Results(string searchType, string searchTerm)
         {
             List<Job> jobs = new List<Job>();
@@ -34,7 +35,8 @@ namespace TechJobsMVC.Controllers
                 jobs = JobData.FindByColumnAndValue(searchType, searchTerm);
             }
             ViewBag.jobs = jobs;
-            return View();
+            ViewBag.columns = ListController.ColumnChoices;
+            return View("Index");
         }
     }
 }
